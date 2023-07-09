@@ -17,6 +17,7 @@ use App\Http\Controllers\ComputresController;
 
 Route::get('/', [StaticController::class, 'index'])->name('home.index');
 Route::get('/abute', [StaticController::class, 'abute'])->name('home.abute');
+
 Route::resource('/computers', ComputresController::class);
 
 // Route::get('/', [StaticController::class, 'index']);

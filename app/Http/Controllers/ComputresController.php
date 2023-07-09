@@ -11,22 +11,22 @@ class ComputresController extends Controller
     {
         return [
             ['id' => 1, 'name' => 'Apple', 'origin' => 'USA'],
-            ['id' => 1, 'name' => 'Dell', 'origin' => 'USA'],
-            ['id' => 1, 'name' => 'HP', 'origin' => 'USA'],
-            ['id' => 1, 'name' => 'Lenovo', 'origin' => 'CHN'],
-            ['id' => 1, 'name' => 'Asus', 'origin' => 'TWN'],
-            ['id' => 1, 'name' => 'Acer', 'origin' => 'TWN'],
-            ['id' => 1, 'name' => 'MSI', 'origin' => 'TWN'],
-            ['id' => 1, 'name' => 'Samsung', 'origin' => 'KOR'],
-            ['id' => 1, 'name' => 'LG', 'origin' => 'KOR'],
-            ['id' => 1, 'name' => 'Fujitsu', 'origin' => 'JPN'],
-            ['id' => 1, 'name' => 'Toshiba', 'origin' => 'JPN'],
-            ['id' => 1, 'name' => 'Sony', 'origin' => 'JPN'],
-            ['id' => 1, 'name' => 'NEC', 'origin' => 'JPN'],
-            ['id' => 1, 'name' => 'Panasonic', 'origin' => 'JPN'],
-            ['id' => 1, 'name' => 'Sharp', 'origin' => 'JPN'],
-            ['id' => 1, 'name' => 'IBM', 'origin' => 'USA'],
-            ['id' => 1, 'name' => 'Compaq', 'origin' => 'USA'],
+            ['id' => 2, 'name' => 'Dell', 'origin' => 'USA'],
+            ['id' => 3, 'name' => 'HP', 'origin' => 'USA'],
+            ['id' => 4, 'name' => 'Lenovo', 'origin' => 'CHN'],
+            ['id' => 5, 'name' => 'Asus', 'origin' => 'TWN']
+            // ['id' => 6, 'name' => 'Acer', 'origin' => 'TWN'],
+            // ['id' => 1, 'name' => 'MSI', 'origin' => 'TWN'],
+            // ['id' => 1, 'name' => 'Samsung', 'origin' => 'KOR'],
+            // ['id' => 1, 'name' => 'LG', 'origin' => 'KOR'],
+            // ['id' => 1, 'name' => 'Fujitsu', 'origin' => 'JPN'],
+            // ['id' => 1, 'name' => 'Toshiba', 'origin' => 'JPN'],
+            // ['id' => 1, 'name' => 'Sony', 'origin' => 'JPN'],
+            // ['id' => 1, 'name' => 'NEC', 'origin' => 'JPN'],
+            // ['id' => 1, 'name' => 'Panasonic', 'origin' => 'JPN'],
+            // ['id' => 1, 'name' => 'Sharp', 'origin' => 'JPN'],
+            // ['id' => 1, 'name' => 'IBM', 'origin' => 'USA'],
+            // ['id' => 1, 'name' => 'Compaq', 'origin' => 'USA'],
 
         ];
     }
@@ -35,7 +35,7 @@ class ComputresController extends Controller
     public function index()
     {
         return view('computers.index', [
-            'c' => self::getData()
+            'computers' => self::getData()
         ]);
     }
     // _________________________________________________________
@@ -53,7 +53,15 @@ class ComputresController extends Controller
 
     public function show(string $id)
     {
-        //
+        $computers = self::getData();
+        $index = array_search($id, array_column($computers,'id'));
+
+        if($index === false){
+            abort(404);
+        }
+        return view('computers.show',[
+            'computer' => $computers[$index]
+        ]);
     }
 
     // _________________________________________________________

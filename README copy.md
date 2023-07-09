@@ -19,5 +19,11 @@
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
 
+### if($index === false){
+###     abort(404);
+### }
+
+-  abort(404);
+- [Powerful dependency injection container](https://laravel.com/docs/container).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
