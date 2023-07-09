@@ -17,6 +17,6 @@ class StaticController extends Controller
     }
     public function computers()
     {
-        return view('computers');
+        //
     }
 }

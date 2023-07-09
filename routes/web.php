@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticController;
+use App\Http\Controllers\ComputresController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,8 @@ use App\Http\Controllers\StaticController;
 |
 */
 
-Route::get('/', [StaticController::class, 'index']);
-Route::get('/abute', [StaticController::class, 'abute']);
-Route::get('/computers', [StaticController::class, 'computers']);
+Route::get('/', [StaticController::class, 'index'])->name('home.index');
+Route::get('/abute', [StaticController::class, 'abute'])->name('home.abute');
+Route::resource('/computers', ComputresController::class);
 
 // Route::get('/', [StaticController::class, 'index']);
