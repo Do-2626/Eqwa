@@ -4,17 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>😒🏠</title>
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
     <!-- Styles -->
     <link href="css\tailwind.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
 
 <body class="antialiased">
@@ -36,13 +32,7 @@
                 <h3>this is a home page</h3>
             </div>
         </div>
-
     </div>
-
-
-    <div id="eJOY__extension_root" class="eJOY__extension_root_class" style="all: unset;"></div><iframe
-        id="nr-ext-rsicon"
-        style="position: absolute; display: none; width: 50px; height: 50px; z-index: 2147483647; border-style: none; background: transparent;"></iframe>
 </body>
 
 </html>

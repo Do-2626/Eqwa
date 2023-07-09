@@ -18,10 +18,10 @@
 </head>
 
 <body class="antialiased">
-    <nav class="flex relative py-4 px-6 gap-10">
+<nav class="flex relative py-4 px-6 gap-10">
         <a href="/">Home</a>
         <a href="/abute">About</a>
-        <a href="/computers">Computers</a>
+        <a href="/content">Contact</a>
     </nav>
     <div
         class="relative sm:flex sm:justify-center min-h-screen bg-center bg-gray-100 dark:bg-dots-lighter selection:bg-red-500 selection:text-white p-3 text-xl">
@@ -29,11 +29,19 @@
         <div class="max-w-7xl mx-auto p-6 lg:p-8 mb-8">
 
             <div class="flex justify-center">
-                <h1 class="text-4xl">Computres</h1>
+                <h1 class="text-4xl">Abute</h1>
             </div>
 
             <div class="mt-12 ">
-                <h3>this is a home page</h3>
+                <div>
+                    <ui class="flex flex-col justify-center my-7 gap-3">
+                        <a href="http://127.0.0.1:8000/computres/4" class="hover:text-fuchsia-600">
+                            <li class="p-3 border-4 rounded-xl text-xl list-none">
+                                <strong>Samsung</strong> from <strong>KOR</strong> <span class="">95$</span>
+                            </li>
+                        </a>
+                    </ui>
+                </div>
             </div>
         </div>
 
