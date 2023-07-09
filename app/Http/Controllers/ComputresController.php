@@ -6,57 +6,71 @@ use Illuminate\Http\Request;
 
 class ComputresController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+
+    private static function getData()
     {
-        return view('computers.computers');
+        return [
+            ['id' => 1, 'name' => 'Apple', 'origin' => 'USA'],
+            ['id' => 1, 'name' => 'Dell', 'origin' => 'USA'],
+            ['id' => 1, 'name' => 'HP', 'origin' => 'USA'],
+            ['id' => 1, 'name' => 'Lenovo', 'origin' => 'CHN'],
+            ['id' => 1, 'name' => 'Asus', 'origin' => 'TWN'],
+            ['id' => 1, 'name' => 'Acer', 'origin' => 'TWN'],
+            ['id' => 1, 'name' => 'MSI', 'origin' => 'TWN'],
+            ['id' => 1, 'name' => 'Samsung', 'origin' => 'KOR'],
+            ['id' => 1, 'name' => 'LG', 'origin' => 'KOR'],
+            ['id' => 1, 'name' => 'Fujitsu', 'origin' => 'JPN'],
+            ['id' => 1, 'name' => 'Toshiba', 'origin' => 'JPN'],
+            ['id' => 1, 'name' => 'Sony', 'origin' => 'JPN'],
+            ['id' => 1, 'name' => 'NEC', 'origin' => 'JPN'],
+            ['id' => 1, 'name' => 'Panasonic', 'origin' => 'JPN'],
+            ['id' => 1, 'name' => 'Sharp', 'origin' => 'JPN'],
+            ['id' => 1, 'name' => 'IBM', 'origin' => 'USA'],
+            ['id' => 1, 'name' => 'Compaq', 'origin' => 'USA'],
+
+        ];
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    // _________________________________________________________
+    public function index()
+    {
+        return view('computers.index', [
+            'c' => self::getData()
+        ]);
+    }
+    // _________________________________________________________
     public function create()
     {
         //
     }
+    // _________________________________________________________
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         //
     }
+    // _________________________________________________________
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+    // _________________________________________________________
+
     public function edit(string $id)
     {
         //
     }
+    // _________________________________________________________
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, string $id)
     {
         //
     }
+    // _________________________________________________________
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         //
