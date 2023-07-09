@@ -10,15 +10,17 @@
         <div class="flex items-center justify-between gap-4">
             <a href="{{ route('computers.show', ['computer'=>$computer['id']] ) }}" class="hover:text-fuchsia-600">
                 <li class="p-3 rounded-xl text-xl list-none">
-                    <strong>{{ $computer['name'] }}</strong> from <strong>KOR</strong> <span class="">95$</span>
+                    <strong>{{ $computer['name'] }}</strong> from <strong>{{ $computer['origin'] }}</strong> <span
+                        class="">{{ $computer['price'] }}$</span>
                 </li>
             </a>
-            <div class="mr-8">
-                <!-- in index -->
-                <button type="submit">
-                    Edit
-                </button>
-            </div>
+            <a href="{{ route('computers.edit', ['computer'=>$computer['id']] ) }}">
+                <div class="">
+                    <button type="submit">
+                        Edit
+                    </button>
+                </div>
+            </a>
         </div>
 
         @endforeach
@@ -31,7 +33,9 @@
 @endsection
 
 @section('Create')
-<button type="submit">
-    Create
-</button>
+<a href="{{ route('computers.create') }}">
+    <button type="submit">
+        Create
+    </button>
+</a>
 @endsection
