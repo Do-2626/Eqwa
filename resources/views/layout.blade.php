@@ -26,11 +26,11 @@
         </div>
     </nav>
     <div
-        class="relative sm:flex sm:justify-center min-h-screen bg-center bg-gray-100 dark:bg-dots-lighter selection:bg-red-500 selection:text-white p-3 text-xl">
+        class="relative flex justify-center min-h-[calc(100vh-60px)] bg-center bg-gray-100 dark:bg-dots-lighter selection:bg-red-500 selection:text-white p-3 text-xl">
 
-        <div class="flex flex-col max-w-7xl mx-auto p-6  mb-8  w-[450px] ">
+        <div class="flex flex-col items-center max-w-7xl mx-auto p-6  mb-8">
 
-            <div class="flex  items-start gap-8">
+            <div class="flex gap-8">
                 <h1 class="text-4xl">@yield('title')</h1>
             </div>
 
